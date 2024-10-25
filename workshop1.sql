@@ -54,6 +54,13 @@ CREATE TABLE customers (
     PRIMARY KEY (id)
 );
 
+CREATE TABLE employees (
+    id SERIAL,
+    first_name TEXT NOT NULL,
+    last_name TEXT NOT NULL,
+    PRIMARY KEY (id)
+);
+
 ---
 --- Add foreign key constraints
 ---
