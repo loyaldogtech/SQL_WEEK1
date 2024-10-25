@@ -69,6 +69,14 @@ CREATE TABLE orders (
     PRIMARY KEY (id)
 );
 
+CREATE TABLE orders_products(
+    product_id INT NOT NULL,
+    order_id INT NOT NULL,
+    quantity INT NOT NULL,
+    discount NUMERIC NOT NULL,
+    PRIMARY KEY (product_id, order_id)
+);
+
 ---
 --- Add foreign key constraints
 ---
