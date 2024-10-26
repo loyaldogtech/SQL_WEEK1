@@ -83,6 +83,12 @@ CREATE TABLE territories (
     PRIMARY KEY (id)
 );
 
+CREATE TABLE employees_territories (
+    employee_id INT NOT NULL,
+    territory_id INT NOT NULL,
+    PRIMARY KEY (employee_id, territory_id)  
+);
+
 ---
 --- Add foreign key constraints
 ---
