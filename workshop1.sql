@@ -58,7 +58,11 @@ CREATE TABLE employees (
     id SERIAL,
     first_name TEXT NOT NULL,
     last_name TEXT NOT NULL,
-    PRIMARY KEY (id)
+    reports_to INT,
+    PRIMARY KEY (id),
+    CONSTRAINT fk_employees_reports_to
+        FOREIGN KEY (reports_to)
+        REFERENCES employees (id)
 );
 
 CREATE TABLE orders (
